@@ -130,11 +130,25 @@ body {
   padding:3px;
   font-family: system-ui;
 }
+.description-content.example {
+  display: none;
+}
+
+.description-example {
+  text-align: center;
+}
+
+.description-title:hover + .description-content.example {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
 
 .description-detail {
-  display: inherit;
+  display: block;
   margin: 3px;
   font-size: 13px;
+  text-align: center;
 }
 @keyframes prueba {
   0% {
@@ -227,7 +241,7 @@ body {
 }
 
 .footer-spa {
-  border: 2px solid black;
+  border: 2px solid rgba(10,11,15,.8);
   border-radius: 4px;
 }
 
