@@ -4,19 +4,28 @@ const isEmpty = (string) => {
   }
 }
 
-// const isNotAParentheses = (string) => {
-//   if (string.match(/[^\)\(]/))
-//   console.log();
-// }
+const isNotAParentheses = (string) => {
+  let arrayString = string.split("");
+  let result = false;
+
+  for(let i in arrayString) {
+    if(!(arrayString[i] == ')' || arrayString[i] =='(')) {
+      return result = true;
+    }
+  }
+}
 
 const basicValidate = (input, object) => {
   const string = input.value;
   let estado = true;
   let reason = '';
 
-  if (isEmpty(string)) {
+  if (isEmpty(string)){
+    estado = false;;
+    reason = 'Vacío';
+  } else if (isNotAParentheses(string)) {
     estado = false;
-    reason  = 'Vacío'
+    reason  = 'Caracter diferente';
   } else if (string.match(/^[\)]/)) {
     estado = false;
     reason = `')' al principio`;

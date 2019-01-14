@@ -207,15 +207,23 @@ body {
 .footer {
   /* border: 2px solid red; */
   position: absolute;
-  display: flex;
+
   left: 30%;
   right: 30%;
   margin-left: 10px;
   margin-right: 10px;
-  justify-content: space-around;
-  align-items: center;
   bottom: 20px;
   font-family: system-ui;
+}
+
+.footer-details {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-title {
+  text-align: center;
 }
 
 .footer-spa {
