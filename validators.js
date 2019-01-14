@@ -10,7 +10,7 @@ const isNotAParentheses = (string) => {
 
   for(let i in arrayString) {
     if(!(arrayString[i] == ')' || arrayString[i] =='(')) {
-      return true;
+      return result = true;
     }
   }
 }
